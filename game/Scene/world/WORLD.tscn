@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c6p8j5yvtcwdx"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_id0ph"]
+[ext_resource type="PackedScene" uid="uid://6xcq52qd6yu2" path="res://Scene/world/room1.tscn" id="2_kabgo"]
+[ext_resource type="PackedScene" uid="uid://mjme5m72lguh" path="res://Scene/world/dhead.tscn" id="4_rh3fp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_id0ph"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -24,8 +26,11 @@ environment = SubResource("Environment_dyhuo")
 transform = Transform3D(-0.72176015, -0.672164, 0.1650993, 0, 0.23853344, 0.9711343, -0.6921432, 0.70092607, -0.17216393, 0, 0, 0)
 shadow_enabled = true
 
+[node name="ROOM" parent="." unique_id=957433741 instance=ExtResource("2_kabgo")]
+transform = Transform3D(0.9999996, -0.00038059088, 0.0008308169, 0.00038085165, 0.99999994, -0.0004163269, -0.00083071645, 0.00041657902, 0.9999997, -0.0064926147, 0.000954628, -0.0073127747)
+
 [node name="ProtoController" parent="." unique_id=442828790 instance=ExtResource("1_id0ph")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0415864, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0202951, 0)
 can_sprint = true
 can_freefly = true
 input_left = "move_left"
@@ -34,30 +39,20 @@ input_forward = "move_up"
 input_back = "move_down"
 input_jump = "Jump"
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=642258340]
-use_collision = true
+[node name="DHEAD" parent="." unique_id=50696254 instance=ExtResource("4_rh3fp")]
+transform = Transform3D(0.19890173, 0, -0.2382342, 0, 0.2550559, 0, 0.18969645, 0, 0.24979487, -29.086933, -3.874334, 27.052301)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=380892168]
-transform = Transform3D(9.65018, 0, 0, 0, 9.65018, 0, 0, 0, 9.65018, 0.07112026, 0.11734629, -0.085407555)
-use_collision = true
-size = Vector3(3.001709, 0.001, 2.9333496)
+[node name="DHEAD2" parent="." unique_id=1668990889 instance=ExtResource("4_rh3fp")]
+transform = Transform3D(-0.22335547, 0, 0.20117056, 0, 0.25505584, 0, -0.16018412, 0, -0.28050557, 38.167774, -3.874334, 31.304007)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1802157652]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9908452, 13.76151)
-use_collision = true
-size = Vector3(29.509766, 4.3120117, 0.5411377)
+[node name="DHEAD3" parent="." unique_id=1984019040 instance=ExtResource("4_rh3fp")]
+transform = Transform3D(0.18818082, 0, -0.2515964, 0, 0.25505581, 0, 0.2003362, 0, 0.23633073, 2.7507987, -4.121027, -17.047812)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1425549338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6560059, -13.3249445)
-use_collision = true
-size = Vector3(29.509766, 4.3120117, 0.5390625)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=701894537]
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1416806511]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.7343025, 1.6560059, -0.2971506)
-use_collision = true
-size = Vector3(29.509766, 4.3120117, 0.5390625)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=816104792]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.010006, 1.6560059, -0.2971506)
-use_collision = true
-size = Vector3(29.509766, 4.3120117, 0.5390625)
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1325219831]
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 212.0
+offset_bottom = 44.0
+text = "FIND ALL DRAGON HEADS"

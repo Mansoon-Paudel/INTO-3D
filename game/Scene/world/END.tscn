@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://j1wantf7op7h"]
+
+[ext_resource type="FontFile" uid="uid://dcr4hnu7kxarx" path="res://Assets/Tomorrow-BoldItalic.ttf" id="1_5t2ql"]
+[ext_resource type="Script" uid="uid://cobt263gyv8v1" path="res://Script/button.gd" id="2_7tfme"]
+
+[node name="End" type="Node2D" unique_id=683500530]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=985166020]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1700162491]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1505690010]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -77.0
+offset_right = 542.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5t2ql")
+theme_override_font_sizes/font_size = 64
+text = "YOU FOUND ALL DRAGON HEADS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1306212740]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -271.0
+offset_right = 542.5
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5t2ql")
+theme_override_font_sizes/font_size = 88
+text = "CONGRATULATIONS!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1170139808]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -185.0
+offset_right = 104.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "RESTART"
+script = ExtResource("2_7tfme")
+
+[connection signal="button_up" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_button_up"]
