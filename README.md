@@ -22,5 +22,5 @@ An 3D game where you find dragon skulls,
 *Built with Godot 4 & GDScript.*
 
 [![Watch Gameplay](https://github.com/user-attachments/assets/4f92a4a2-a9da-421d-b123-1dc6b94086ae
-)](https://youtu.be/p0BknUG2fCc)
+)]((https://youtu.be/3g5TOz2ZhMI))
 
