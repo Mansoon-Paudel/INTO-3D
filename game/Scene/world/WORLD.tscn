@@ -27,7 +27,7 @@ transform = Transform3D(-0.72176015, -0.672164, 0.1650993, 0, 0.23853344, 0.9711
 shadow_enabled = true
 
 [node name="ROOM" parent="." unique_id=957433741 instance=ExtResource("2_kabgo")]
-transform = Transform3D(0.9999996, -0.00038059088, 0.0008308169, 0.00038085165, 0.99999994, -0.0004163269, -0.00083071645, 0.00041657902, 0.9999997, -0.0064926147, 0.000954628, -0.0073127747)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20309162, 0.13706207, -0.25794125)
 
 [node name="ProtoController" parent="." unique_id=442828790 instance=ExtResource("1_id0ph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0202951, 0)
@@ -40,7 +40,7 @@ input_back = "move_down"
 input_jump = "Jump"
 
 [node name="DHEAD" parent="." unique_id=50696254 instance=ExtResource("4_rh3fp")]
-transform = Transform3D(0.19890173, 0, -0.2382342, 0, 0.2550559, 0, 0.18969645, 0, 0.24979487, -29.086933, -3.874334, 27.052301)
+transform = Transform3D(0.19890173, 0, -0.2382342, 0, 0.2550559, 0, 0.18969645, 0, 0.24979487, -29.30869, -3.874334, 26.871159)
 
 [node name="DHEAD2" parent="." unique_id=1668990889 instance=ExtResource("4_rh3fp")]
 transform = Transform3D(-0.22335547, 0, 0.20117056, 0, 0.25505584, 0, -0.16018412, 0, -0.28050557, 38.167774, -3.874334, 31.304007)
